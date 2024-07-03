@@ -1,4 +1,4 @@
-FROM  hub.c.163.com/qingzhou/multi-arch/tomcat-8.5-jdk8-openjdk-skiff:v1.0
+FROM  harbor.cloud.netease.com/qztest/cicd-mvn3.5-jdk8:v2.1.1 
 ENV TZ=Asia/Shanghai LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
 ENV ROTATE_LOG_SIZE=1000M
 ENV ROTATE_LOG_INTERVAL=86400

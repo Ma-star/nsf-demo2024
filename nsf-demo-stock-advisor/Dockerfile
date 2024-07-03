@@ -1,4 +1,4 @@
-FROM  hub.c.163.com/qingzhou/multi-arch/tomcat-8.5-jdk8-openjdk-skiff:v1.0
+FROM harbor.cloud.netease.com/qztest/cicd-mvn3.5-jdk8:v2.1.1 
 ADD target/nsf-demo-*.jar /app.jar
 
 ADD start.sh /start.sh
