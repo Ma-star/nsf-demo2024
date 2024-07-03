@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.netease.cloud.nsf.db.configservice.ReleaseMapper"> 
+  <resultMap id="BaseResultMap" type="com.netease.cloud.nsf.db.configservice.Release">
+    <result column="NamespaceName" property="NamespaceName"/>
+    <result column="AppId" property="AppId"/>
+    <result column="Id" property="Id"/>
+  </resultMap>
+  <select id="list" resultMap="BaseResultMap">select Id,AppId,NamespaceName from `Release`</select>
+  <update id="update" parameterType="com.netease.cloud.nsf.db.configservice.Release">update `Release`
+    <set>
+      <if test="AppId != null">AppId = #{AppId},</if>
+      <if test="NamespaceName != null">NamespaceName = #{NamespaceName},</if>
+    </set>
+    <where>AND Id = #{Id}</where>
+  </update>
+</mapper>

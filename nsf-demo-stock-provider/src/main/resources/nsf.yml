@@ -1,0 +1,33 @@
+nsf:
+  #  基本信息
+  application:
+    name: nsf-demo-stock-provider
+    version: 0.0.1
+    desc: this is service description
+
+  # agent配置
+  server:
+    enable: true # 是否启用NSF Server控制中心, 默认关闭
+    skey: 123
+    address: grpc://localhost:8980
+
+  #  注册中心
+  registry:
+    enable: true # 是否启用eureka注册发现服务, 默认关闭
+    address: http://localhost:8877/eureka/
+
+  # 应用监控
+  metrics:
+    enable: true # 是否启用hystrix的metrics应用监控
+
+  # 服务鉴权配置
+  authority:
+    devMode: true
+    #是否开启外部访问免鉴权
+    enable: false
+    #认证中心地址
+    server: http://10.182.2.108:10101
+    #访问重试次数(仅403状态会重试，默认为 3 )
+    retry: 3
+    accessKey: 97e64b04dea64d78a8a691ae9be1f30e
+    secretKey: 906130e6af0048b7aca4ce944e70cd16
