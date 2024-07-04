@@ -15,9 +15,9 @@
 	</parent>
 
 	<modules>
-		<module>nsf-demo-stock-provider</module>
-		<module>nsf-demo-stock-viewer</module>
-		<module>nsf-demo-stock-advisor</module>
+		<module>nsf-demo-stock-provider-new</module>
+		<module>nsf-demo-stock-viewer-new</module>
+		<module>nsf-demo-stock-advisor-new</module>
 	</modules>
 
 	<properties>
