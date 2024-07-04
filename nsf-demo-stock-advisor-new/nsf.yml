@@ -1,0 +1,15 @@
+nsf:
+  type: http
+  nsfServer: 'http://nsf-server.jfyl.upgrade.test.com'
+  application:
+    name: nsf-advisor-shoudong
+    version: v0.0.1
+    projectCode: project1
+    envCode: prod
+    mark: ""
+    group: default
+    tags: []
+  manager:
+    patterns: 
+      - 
+        className: 'com.netease.cloud.nsf.demo.stock.provider.web.*'

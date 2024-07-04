@@ -1,0 +1,22 @@
+ARG BASE_IMAGE=ahaarbor.cloud.netease.com/qztest/cicd-mvn3.5-jdk8:v2.1.1
+
+FROM ${BASE_IMAGE}
+
+ENV TZ=Asia/Shanghai LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+
+#add nsf agent jar and config file
+RUN mkdir -p /opt/nsf && cd /opt/nsf && \
+    curl -O http://console.jfyl.upgrade.test.com/download/nsf/nsf-agent-fat.jar
+
+
+ADD ./nsf-demo-stock-advisor/nsf.yml /opt/nsf/nsf.yml
+#add application jar
+ADD ./nsf-demo-stock-advisor/target/*.jar /opt/nsf/
+
+
+ENV JAVA_OPTS='-javaagent:/opt/nsf/nsf-agent-fat.jar=nsf -Dstock_provider_url=http://stock-provider-shoudong -Dstock_viewer_url=http://stock-viewer-shoudong'
+
+CMD java $JAVA_OPTS -jar /opt/nsf/nsf-demo-stock-advisor-1.0-SNAPSHOT.jar

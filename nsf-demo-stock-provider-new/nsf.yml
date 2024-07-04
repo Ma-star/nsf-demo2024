@@ -1,0 +1,14 @@
+nsf:
+  type: http
+  nsfServer: 'http://nsf-server.jfyl.upgrade.test.com'
+  application:
+    name: stock-provider-shoudong
+    version: v0.2
+    projectCode: project1
+    projectEnv: prod
+    mark: 
+    tags: []
+  manager:
+    patterns: 
+      - 
+        className: 'com.netease.cloud.nsf.demo.stock.provider.web.controller.*'
