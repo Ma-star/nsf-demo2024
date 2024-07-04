@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=haarbor.cloud.netease.com/qztest/cicd-mvn3.5-jdk8:v2.1.1
+ARG BASE_IMAGE=artifactory.test449-qingzhou.com/mmxtest1/cicd-mvn3.5-jdk8:v2.1.1
 
 FROM ${BASE_IMAGE}
 
