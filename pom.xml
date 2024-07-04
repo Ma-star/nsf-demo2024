@@ -3,14 +3,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.netease.cloud</groupId>
-	<artifactId>nsf-sample</artifactId>
+	<artifactId>nsf-demo</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.8.RELEASE</version>
+		<version>2.1.6.RELEASE</version>
 		<relativePath />
 	</parent>
 
@@ -18,20 +18,12 @@
 		<module>nsf-demo-stock-provider</module>
 		<module>nsf-demo-stock-viewer</module>
 		<module>nsf-demo-stock-advisor</module>
-		<module>nsf-demo-stock-caller</module>
-		<module>nsf-demo-stock-dubbo-wall</module>
-		<module>nsf-demo-stock-dubbo-api</module>
-		<module>nsf-demo-stock-dubbo-echo</module>
-        <module>nsf-eureka</module>
-		<module>api-gateway-proxy-webservice</module>
-        <module>nsf-demo-zk-dubbo</module>
-		<module>nsf-demo-stock-advisor-springmvc</module>
-    </modules>
+	</modules>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<spring.boot.version>1.5.8.RELEASE</spring.boot.version>
+		<spring.boot.version>2.1.6.RELEASE</spring.boot.version>
 	</properties>
 
 	<build>
